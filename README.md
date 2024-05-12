@@ -18,7 +18,23 @@ git clone https://github.com/username/api-renault-system.git
 ```bash
 cd renault-web-system-api
 ```
-3. Configure the MySQL database settings in application.properties file.
+3. Configure the MySQL database settings in application.properties file:
+```properties
+spring.application.name=your-name-aplication
+server.adress=your-ip-aplication
+server.port=your-port-aplication
+spring.datasource.url=your-database-url-aplication
+spring.datasource.username=your-username-aplication
+spring.datasource.password=your-password-aplication
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.servlet.multipart.max-file-size=5MB
+spring.servlet.multipart.max-request-size=5MB
+spring.http.multipart.max-file-size=5MB
+spring.http.multipart.max-request-size=5MB
+```
 4. Build the project using Maven:
 ```bash
 mvn clean install

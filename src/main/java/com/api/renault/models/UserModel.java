@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "tbl_renault_user")
 public class UserModel {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonProperty("id")

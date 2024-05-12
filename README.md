@@ -16,7 +16,7 @@ git clone https://github.com/username/api-renault-system.git
 ```
 2. Navigate to the project directory:
 ```bash
-cd renault-web-system-api
+cd api-renault-system
 ```
 3. Configure the MySQL database settings in application.properties file:
 ```properties

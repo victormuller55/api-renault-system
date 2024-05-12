@@ -28,6 +28,6 @@ mvn clean install
 mvn spring-boot:run
 ```
 ## Acknowledgements
-This project was developed using Java and Spring Boot framework.
-Special thanks to the developers of MySQL for providing a robust database solution.
-Thanks to all contributors who helped improve this project.
+- This project was developed using Java and Spring Boot framework.
+- Special thanks to the developers of MySQL for providing a robust database solution.
+- Thanks to all contributors who helped improve this project.

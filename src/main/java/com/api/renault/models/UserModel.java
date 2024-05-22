@@ -1,5 +1,6 @@
 package com.api.renault.models;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 
 @Entity
@@ -19,6 +20,10 @@ public class UserModel {
 
     @JsonProperty("password")
     private String passwordUser;
+
+    public UserModel() {
+        this.passwordUser = "123";
+    }
 
     public Integer getIdRenaultUser() {
         return idRenaultUser;

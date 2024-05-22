@@ -39,14 +39,6 @@ public class RiskController {
         }
     }
 
-    @GetMapping("/chat")
-    public ResponseEntity<Object> queryChat(@RequestParam(name = "query") String query) throws JsonProcessingException {
-        try {
-            return SuccessResponse.success200(JsonConverter.convertToJson(ChatIA.run(query)));
-        } catch (Exception e) {
-            return ErrorResponse.error500(e);
-        }
-    }
 
 //    @GetMapping("/dashboard/counter")
 //    public ResponseEntity<Integer> getTotalRisks() {

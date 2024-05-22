@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class ChatIA {
 
-        public static String run(String query) {
+        public static String run(String query) throws IOException, InterruptedException {
 
             String pythonScriptPath = "ia_chat/chat.py";
             String[] command = {"python", pythonScriptPath, "-q", query};
@@ -34,13 +34,12 @@ public class ChatIA {
                 }
 
                 int exitCode = process.waitFor();
-                System.out.println("Exited with code: " + exitCode);
 
             } catch (IOException | InterruptedException e) {
-                return e.toString();
+                throw e;
             }
 
-            return "Erro";
+            return "-";
         }
 }
 

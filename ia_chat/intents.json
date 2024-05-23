@@ -3,82 +3,165 @@
     {
       "tag": "greeting",
       "patterns": [
-        "Hi",
-        "Hey",
-        "How are you",
-        "Is anyone there?",
-        "Hello",
-        "Good day"
+        "Oi",
+        "Olá",
+        "Como você está?",
+        "Tem alguém aí?",
+        "Bom dia",
+        "Boa tarde"
       ],
       "responses": [
-        "Hey :-)",
-        "Hello, thanks for visiting",
-        "Hi there, what can I do for you?",
-        "Hi there, how can I help?"
+        "Oi :-)",
+        "Olá, obrigado pela visita",
+        "Oi, como posso te ajudar?",
+        "Olá, como posso ajudar?",
+        "Oi! Espero que você esteja bem.",
+        "Olá! Como você está hoje?",
+        "Bem-vindo! Posso ajudar em algo?",
+        "Oi, tudo bem por aí?",
+        "Olá! Em que posso ser útil hoje?",
+        "Oi, como está seu dia?",
+        "Oi, é bom te ver!",
+        "Olá, espero que seu dia esteja ótimo!",
+        "Bom dia! Como posso ajudar?",
+        "Boa tarde! O que posso fazer por você?"
       ]
     },
     {
       "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye"],
+      "patterns": ["Tchau", "Até mais", "Adeus"],
       "responses": [
-        "See you later, thanks for visiting",
-        "Have a nice day",
-        "Bye! Come back again soon."
+        "Até mais, obrigado pela visita",
+        "Tenha um bom dia",
+        "Tchau! Volte novamente em breve.",
+        "Adeus! Foi um prazer ajudar.",
+        "Até a próxima! Cuide-se.",
+        "Tchau, tenha um ótimo dia!",
+        "Nos vemos em breve!",
+        "Tchau, volte sempre!",
+        "Adeus e obrigado!",
+        "Até mais, espero te ver em breve!",
+        "Tchau, e tenha um dia maravilhoso!",
+        "Até logo! Estarei aqui quando precisar.",
+        "Despedidas são sempre difíceis, tchau!",
+        "Até a próxima, cuide-se!"
       ]
     },
     {
       "tag": "thanks",
-      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+      "patterns": ["Obrigado", "Muito obrigado", "Isso é útil", "Obrigado(a)!"],
+      "responses": [
+        "Fico feliz em ajudar!",
+        "A qualquer momento!",
+        "É um prazer",
+        "De nada!",
+        "Sempre à disposição!",
+        "Não há de quê!",
+        "Fico contente em saber que pude ajudar!",
+        "Foi um prazer ajudar!",
+        "Obrigado por agradecer!",
+        "Estou aqui para ajudar sempre que precisar.",
+        "Que bom que pude ser útil!",
+        "Fico feliz que você gostou!",
+        "Estou aqui para o que precisar!",
+        "Disponha sempre!"
+      ]
     },
     {
       "tag": "items",
       "patterns": [
-        "Which items do you have?",
-        "What kinds of items are there?",
-        "What do you sell?"
+        "Quais itens você tem?",
+        "Que tipos de itens existem?",
+        "O que você vende?"
       ],
       "responses": [
-        "We sell coffee and tea",
-        "We have coffee and tea"
+        "Vendemos café e chá",
+        "Temos café e chá",
+        "Oferecemos uma variedade de cafés e chás.",
+        "Nossos itens incluem diferentes tipos de café e chá.",
+        "Temos uma seleção especial de cafés e chás para você escolher.",
+        "Vendemos cafés especiais e chás variados.",
+        "Nossa loja oferece uma ampla gama de cafés e chás.",
+        "Temos diversos tipos de café e chá à sua disposição.",
+        "Você encontrará uma grande variedade de cafés e chás aqui.",
+        "Nossos produtos principais são cafés e chás de alta qualidade.",
+        "Oferecemos tanto cafés clássicos quanto chás exóticos.",
+        "Temos opções para todos os gostos em café e chá.",
+        "Nosso catálogo inclui diferentes tipos de café e chá.",
+        "Aqui você pode encontrar seu café ou chá favorito."
       ]
     },
     {
       "tag": "payments",
       "patterns": [
-        "Do you take credit cards?",
-        "Do you accept Mastercard?",
-        "Can I pay with Paypal?",
-        "Are you cash only?"
+        "Vocês aceitam cartões de crédito?",
+        "Vocês aceitam Mastercard?",
+        "Posso pagar com Paypal?",
+        "Só aceitam dinheiro?"
       ],
       "responses": [
-        "We accept VISA, Mastercard and Paypal",
-        "We accept most major credit cards, and Paypal"
+        "Aceitamos VISA, Mastercard e Paypal",
+        "Aceitamos a maioria dos cartões de crédito e Paypal",
+        "Você pode pagar com VISA, Mastercard ou Paypal.",
+        "Sim, aceitamos cartões de crédito e Paypal.",
+        "Trabalhamos com VISA, Mastercard, Paypal e dinheiro.",
+        "Aceitamos diversos métodos de pagamento, incluindo cartões e Paypal.",
+        "Você pode usar Mastercard, VISA ou Paypal para pagar.",
+        "Estamos equipados para aceitar a maioria dos cartões de crédito e Paypal.",
+        "Além de dinheiro, aceitamos cartões VISA, Mastercard e Paypal.",
+        "Pagamentos podem ser feitos via cartões de crédito e Paypal.",
+        "Sim, aceitamos cartões de crédito, incluindo Mastercard e VISA, além de Paypal.",
+        "Nossos métodos de pagamento incluem cartões de crédito e Paypal.",
+        "Você pode pagar com Mastercard, VISA, ou via Paypal.",
+        "Aceitamos diversos meios de pagamento, incluindo dinheiro, cartões e Paypal."
       ]
     },
     {
       "tag": "delivery",
       "patterns": [
-        "How long does delivery take?",
-        "How long does shipping take?",
-        "When do I get my delivery?"
+        "Quanto tempo demora a entrega?",
+        "Quanto tempo leva o envio?",
+        "Quando vou receber minha entrega?"
       ],
       "responses": [
-        "Delivery takes 2-4 days",
-        "Shipping takes 2-4 days"
+        "A entrega leva de 2 a 4 dias",
+        "O envio leva de 2 a 4 dias",
+        "Normalmente, leva de 2 a 4 dias para entregarmos.",
+        "Você deve receber sua entrega entre 2 e 4 dias.",
+        "O tempo de entrega é geralmente de 2 a 4 dias úteis.",
+        "A entrega costuma levar de 2 a 4 dias úteis.",
+        "Nosso prazo de entrega é de 2 a 4 dias.",
+        "O envio geralmente demora entre 2 e 4 dias.",
+        "Preparamos sua entrega para que chegue em 2 a 4 dias.",
+        "Seu pedido deve chegar em até 4 dias.",
+        "Em média, a entrega leva de 2 a 4 dias úteis.",
+        "O prazo para a entrega é de 2 a 4 dias.",
+        "Estimamos que a entrega ocorra entre 2 e 4 dias úteis.",
+        "A maioria das entregas ocorre em 2 a 4 dias."
       ]
     },
     {
       "tag": "funny",
       "patterns": [
-        "Tell me a joke!",
-        "Tell me something funny!",
-        "Do you know a joke?"
+        "Conte-me uma piada!",
+        "Conte-me algo engraçado!",
+        "Você conhece uma piada?"
       ],
       "responses": [
-        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-        "What did the buffalo say when his son left for college? Bison.",
-        "O que uma impressora disse para a outra? essa folha é sua ou é impressão minha?"
+        "Por que o hipster queimou a boca? Ele bebeu o café antes de esfriar.",
+        "O que o búfalo disse quando seu filho foi para a faculdade? Bisonho.",
+        "Por que o matemático levou um lápis para a cama? Para desenhar as cortinas.",
+        "Qual é o contrário de volátil? Vem cá sobrinho.",
+        "Por que a vaca foi ao espaço? Para ver a Via Láctea.",
+        "O que o chão falou para a mesa? Estou sentindo uma certa pressão.",
+        "Por que o computador foi ao médico? Porque estava com um vírus.",
+        "O que um tomate disse para o outro? Vamos ketchup.",
+        "Por que a bicicleta não conseguiu ficar em pé sozinha? Estava cansada.",
+        "Como o oceano diz oi? Ele dá uma onda.",
+        "Por que o livro de matemática se suicidou? Porque tinha muitos problemas.",
+        "Por que o relógio foi ao psicólogo? Estava marcando bobeira.",
+        "Qual é o animal mais antigo do mundo? A Zebra, porque é preta e branca.",
+        "O que é um ponto marrom no tapete? Uma formiga de jaqueta."
       ]
     }
   ]

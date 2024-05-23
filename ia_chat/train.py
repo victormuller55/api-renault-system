@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import json
 import numpy as np
 from model import NeuralNet
@@ -16,25 +15,25 @@ class ChatDataset(Dataset):
 
   def __getitem__(self, index):
     return self.x_data[index], self.y_data[index]
-  
+
   def __len__(self):
     return self.n_samples
- 
+
 def train():
   with open('intents.json', 'r') as file:
-      intents = json.load(file)
+    intents = json.load(file)
 
   all_words = []
   tags = []
   xy = []
 
   for intent in intents['intents']:
-      tag = intent['tag']
-      tags.append(tag)
-      for pattern in intent['patterns']:
-          w = tokenize(pattern)
-          all_words.extend(w)
-          xy.append((w, tag))
+    tag = intent['tag']
+    tags.append(tag)
+    for pattern in intent['patterns']:
+      w = tokenize(pattern)
+      all_words.extend(w)
+      xy.append((w, tag))
 
   ignore_words = ['?', '!', '.', ',']
   all_words = [stem(w) for w in all_words if w not in ignore_words]
@@ -54,40 +53,40 @@ def train():
   x_train = np.array(x_train)
   y_train = np.array(y_train)
 
-#Hyprparameters
+  # Hyprparameters
   batch_size = 8
   input_size = len(all_words)
   hidden_size = 8
   output_size = len(tags)
   learning_rate = 0.001
   num_epochs = 1000
-    
+
   dataset = ChatDataset(x_train, y_train)
   train_loader = DataLoader(dataset=dataset, batch_size=batch_size, shuffle=True, num_workers=0)
 
   device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
   model = NeuralNet(input_size, hidden_size, output_size).to(device)
 
-#loss and optimizer
+  # Loss and optimizer
   criterion = nn.CrossEntropyLoss()
   optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
   for epoch in range(num_epochs):
     for (words, labels) in train_loader:
       words = words.to(device)
-      labels = labels.to(device)
+      labels = labels.long().to(device)  # Converte as labels para LongTensor
 
-      # forward
+      # Forward
       outputs = model(words)
       loss = criterion(outputs, labels)
 
-      # backward and optimizer
+      # Backward and optimizer
       optimizer.zero_grad()
       loss.backward()
       optimizer.step()
 
     if (epoch + 1) % 100 == 0:
-      print(f"epoch {epoch +1}/{num_epochs}, loss={loss.item():.4f}")
+      print(f"epoch {epoch + 1}/{num_epochs}, loss={loss.item():.4f}")
 
   print(f"final_loss={loss.item():.4f}")
 
@@ -103,8 +102,7 @@ def train():
   FILE = "data.pth"
   torch.save(data, FILE)
 
-  print(f"Training complete. File save to {FILE}")
-
+  print(f"Training complete. File saved to {FILE}")
 
 def main():
   train()

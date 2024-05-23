@@ -8,6 +8,7 @@ import com.api.renault.repository.MessageRepository;
 import com.api.renault.responses.ErrorResponse;
 import com.api.renault.responses.SuccessResponse;
 import com.api.renault.util.JsonConverter;
+import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -29,7 +30,6 @@ public class ChatController {
         try {
 
             ChatModel chatModel = new ChatModel(title);
-
             chatRepository.save(chatModel);
 
             return SuccessResponse.success200(chatModel);
@@ -49,13 +49,15 @@ public class ChatController {
             if (chatRepository.existsById(chatId)) {
                 String iAAnswer = ChatIA.run(query);
 
+                JsonNode iaMessage = JsonConverter.convertToJson(iAAnswer);
+
                 MessageModel userMessage = new MessageModel(chatId, idUser, query);
-                MessageModel iAMessage = new MessageModel(chatId, 0, iAAnswer);
+                MessageModel iAMessage = new MessageModel(chatId, 0, iaMessage.get("answer").asText());
 
                 messageRepository.save(userMessage);
                 messageRepository.save(iAMessage);
 
-                return SuccessResponse.success200(JsonConverter.convertToJson(iAAnswer));
+                return SuccessResponse.success200(iAMessage);
             }
 
             return ErrorResponse.error400("Não foi possivel encontrar o chat");

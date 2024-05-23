@@ -39,7 +39,7 @@ public class ChatIA {
                 throw e;
             }
 
-            return "-";
+            return "aaa";
         }
 }
 

@@ -1,13 +1,9 @@
 package com.api.renault.controllers;
 
-import com.api.renault.chat_ia.ChatIA;
 import com.api.renault.models.RiskModel;
 import com.api.renault.repository.RiskRepository;
 import com.api.renault.responses.ErrorResponse;
 import com.api.renault.responses.SuccessResponse;
-import com.api.renault.util.JsonConverter;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

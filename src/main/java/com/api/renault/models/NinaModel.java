@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "chat")
-public class ChatModel {
+public class NinaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonProperty("chat_id")
@@ -19,7 +19,7 @@ public class ChatModel {
     @JsonProperty("date_creation")
     private Date dateCreation;
 
-    public ChatModel(String title) {
+    public NinaModel(String title) {
         this.title = title;
         this.dateCreation = new Date();
     }

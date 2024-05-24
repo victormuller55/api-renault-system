@@ -49,8 +49,8 @@ if args.query:
         answer["answer"] = random.choice(intent['responses'])
   else:
     # print("I do not understand...")
-    answer["answer"] = "I do not understand..."
-  print(json.dumps(answer))
+    answer["answer"] = "Desculpe, não foi possivel entender sua mensagem, utilize palavras e frases mais simples!"
+  print(json.dumps(answer, ensure_ascii=False))
 
 
 def main() -> None:
